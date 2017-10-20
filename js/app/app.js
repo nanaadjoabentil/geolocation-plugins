@@ -1,12 +1,12 @@
-// initializing variables that will be used throughour document 
+// initializing variables that will be used throughour document
 var map, infoWindow;
 
 // function to initialize map
 function initMap() {
-  var uluru = {lat: 5.5480, lng: -0.1927};
+  var independence_square = {lat: 5.5480, lng: -0.1927};
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 13,
-    center: uluru
+    center: independence_square
   });
 }
 
@@ -29,15 +29,6 @@ function initMap() {
   function onSuccess(position) {
 
       var element = document.getElementById('geolocation');
-      // element.innerHTML = 'Latitude: ' + position.coords.latitude  + '<br />' +
-      //     'Longitude: '          + position.coords.longitude             + '<br />' +
-      //     'Altitude: '           + position.coords.altitude              + '<br />' +
-      //     'Accuracy: '           + position.coords.accuracy              + '<br />' +
-      //     'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
-      //     'Heading: '            + position.coords.heading               + '<br />' +
-      //     'Speed: '              + position.coords.speed                 + '<br />' +
-      //     'Timestamp: '          + position.timestamp          + '<br />';
-
       var longitude = position.coords.longitude;
       var latitude = position.coords.latitude;
       var myPosition = {lat: latitude, lng: longitude};
