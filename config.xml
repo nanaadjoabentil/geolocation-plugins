@@ -3,10 +3,10 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0"  id        = "com.phonegap.helloworld" version   = "1.0.0">
 
-    <name>Hello World</name>
+    <name>Geolocation App</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Application that shows the user's geolocation at the click of a button.
     </description>
 
     <author href="http://npontu.com.com" email="snwolley@gmail.com">ASHESI</author>

@@ -2,6 +2,7 @@
 <html>
 <head>
   <style>
+  /* Defining the height and width of the map to be displayed on screen.*/
   #map {
     height: 400px;
     width: 100%;
@@ -13,13 +14,16 @@
   <h3> Geolocation </h3>
   <div id="map"></div>
 
+<!-- Including scripts here -->
 <script src="js/app/app.js"></script>
 <script src="js/app/bootstrap.js"></script>
 
+<!-- Retrieving map from google maps api online-->
   <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyE7d8GrQrbGm2nzLy1XrQXCdmBD5injk&callback=initMap">
   </script>
 
+<!-- button that redirects to geolocation on click-->
 <button name="button" onclick="onButtonClick()">Click for geolocation</button>
 
 

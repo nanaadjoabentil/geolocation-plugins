@@ -1,4 +1,7 @@
+// initializing variables that will be used throughour document 
 var map, infoWindow;
+
+// function to initialize map
 function initMap() {
   var uluru = {lat: 5.5480, lng: -0.1927};
   map = new google.maps.Map(document.getElementById('map'), {
@@ -7,6 +10,7 @@ function initMap() {
   });
 }
 
+//function for handling possible errors
   function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
     infoWindow.setContent(browserHasGeolocation ?
@@ -15,11 +19,13 @@ function initMap() {
     infoWindow.open(map);
   }
 
+//function that is called when button is clicked
   function onButtonClick()
   {
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
   }
 
+//function that supplies onButtonClick function with variables if navigator.geolocation is successful
   function onSuccess(position) {
 
       var element = document.getElementById('geolocation');
