@@ -1,55 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <meta charset="utf-8">
-  <title>phonegap & jquery mobile boilerplate</title>
+<head>
+  <style>
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+  </style>
+  <title> Geolocation </title>
+</head>
+<body>
+  <h3> Geolocation </h3>
+  <div id="map"></div>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+<script src="js/app/app.js"></script>
+<script src="js/app/bootstrap.js"></script>
 
-  <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
-  <link rel="stylesheet" href="css/jquery.mobile.theme.css" />
-
-  <script>
-    var userAgent = navigator.userAgent + '';
-    if (userAgent.indexOf('iPhone') > -1) {
-      document.write('<script src="js/lib/cordova-iphone.js"></sc' + 'ript>');
-      var mobile_system = 'iphone';
-    } else if (userAgent.indexOf('Android') > -1) {
-      document.write('<script src="js/lib/cordova-android.js"></sc' + 'ript>');
-      var mobile_system = 'android';
-    } else {
-      var mobile_system = '';
-    }
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyE7d8GrQrbGm2nzLy1XrQXCdmBD5injk&callback=initMap">
   </script>
 
-  <script src="js/lib/jquery.js"></script>
-  <!-- your scripts here -->
-  <script src="js/app/app.js"></script>
-  <script src="js/app/bootstrap.js"></script>
-  <script src="js/lib/jquery.mobile.js"></script>
+<button name="button" onclick="onButtonClick()">Click for geolocation</button>
 
-  </head>
-  <body>
 
-    <div data-role="page">
-
-    	<div data-role="header">
-    		<h1>Single page</h1>
-    	</div><!-- /header -->
-
-    	<div data-role="content">
-            <p id="geolocation">
-                Finding geolocation....
-            </p>
-    	</div><!-- /content -->
-      <div data-role="button">
-        <button name="button" type="button" value="button" onclick="onButtonClick()">Click to show geolocation</button>
-        </div>
-
-    	<div data-role="footer">
-    		<h4>Footer content</h4>
-    	</div><!-- /footer -->
-
-    </div><!-- /page -->
   </body>
 </html>
